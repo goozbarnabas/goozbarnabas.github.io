@@ -2,24 +2,33 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css" type="text/css">
-<script src="script.js" />
 </head>
 <body>
 
-<div id="mySidenav" class="sidenav">
+<div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Kezdőlap</a>
-  <a href="#">Demó weboladal</a>
-  <a href="#">Pong játék (béta verzió)</a>
-  <a href="#">Kapcsolat</a>
+  <div class="overlay-content">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
 </div>
 
-<div id="main">
-        <div class="topbar">
-                <span style="font-size:30px; cursor:pointer" onclick="openNav()">&#9776</span>
-        </div>
-</div>
+<h2>Fullscreen Overlay Nav Example</h2>
+<p>Click on the element below to open the fullscreen overlay navigation menu.</p>
+<p>In this example, the navigation menu will slide in, from left to right:</p>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+     
 </body>
-</html> 
+</html>
