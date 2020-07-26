@@ -7,7 +7,7 @@
     <meta name="description" content="Weboldal készítés, videó készítés, egyebek. Készítette: Gőz Barnabás">
     <meta name="keywords" content="HTML, CSS, JavaScript, Weboldal, készítés, videó, vágás, discord, szerver, készítés">
     <meta name="author" content="Gőz Barnabás">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <style>
         body {
             font-family: "Lato", sans-serif;
@@ -21,29 +21,48 @@
             cursor: pointer;
         }
         
-        .openNav {
-            color: white;
-            margin: 0%;
-            float: right;
-            margin-right: 1%;
+        @media only screen and (max-width: 768px) {
+            .openNav {
+                color: white;
+                margin: 0%;
+                float: right;
+                margin-right: -2%;
+                z-index: 40;
+                height: 50px;
+                width: 80px;
+            }
+        }
+        
+        @media only screen and (min-width: 768px) {
+            .openNav {
+                color: white;
+                margin: 0%;
+                float: right;
+                margin-right: -1%;
+                font-size: 50px;
+                z-index: 40;
+                height: 50px;
+                width: 80px;
+            }
         }
         
         .topnavopen {
             background-color: black;
             width: 100%;
-            height: 7%;
+            height: 50px;
             position: fixed;
             margin-left: 0%;
             margin-top: 0%;
             left: 0%;
             top: 0%;
+            z-index: 40;
         }
         
         .sidenav {
             height: 100%;
             width: 0;
             position: fixed;
-            z-index: 1;
+            z-index: 50;
             top: 0;
             left: 0;
             background-color: #111;
@@ -88,19 +107,19 @@
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="../index.html">Kezdőlap</a>
-        <a href="../referenciak/index.html">Referenciák</a>
-        <a href="index.html">Technológia</a>
-        <a href="../kapcsolat/index.html">Kapcsolat</a>
+        <a href="../index.html">🏠 Kezdőlap</a>
+        <a href="../referenciak/index.html">👨🏽‍💻 Referenciák</a>
+        <a href="index.html">🖥 Technológia</a>
+        <a href="../kapcsolat/index.html">📱 Kapcsolat</a>
     </div>
     <div class="topnavopen">
         <img class="logo" src="../pics/goozbarnabas_logo.png " onclick="window.location = 'https://goozbarnabas.github.io'" />
-        <span class="openNav " style=" font-size:30px;cursor:pointer " onclick="openNav() ">&#9776</span>
+        <img class="openNav" src="../pics/menu.png " alt=" " onclick="openNav() " style="cursor: pointer; ">
     </div>
 
     <script>
         function openNav() {
-            document.getElementById("mySidenav").style.width = "250px ";
+            document.getElementById("mySidenav").style.width = "300px ";
         }
 
         function closeNav() {

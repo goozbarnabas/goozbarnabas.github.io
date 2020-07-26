@@ -24,6 +24,7 @@
                 margin-left: 20%;
                 margin-bottom: 16.5%;
                 text-align: center;
+                background-color: #e29f89;
             }
         }
         
@@ -39,7 +40,9 @@
                 border: 2px solid black;
                 margin-bottom: 70%;
                 text-align: center;
-                margin-left: 10%;
+                margin-left: 5%;
+                margin-right: 5%;
+                background-color: #e29f89;
             }
         }
         
@@ -69,7 +72,7 @@
             .hello img {
                 position: absolute;
                 top: 40%;
-                left: 4%;
+                left: 3%;
                 width: 500px;
                 height: 500px;
                 z-index: 25;
@@ -99,10 +102,10 @@
                 color: white;
                 margin: 0%;
                 float: right;
-                margin-right: 1%;
-                margin-top: -5px;
-                font-size: 40px;
+                margin-right: -2%;
                 z-index: 40;
+                height: 50px;
+                width: 80px;
             }
         }
         
@@ -111,10 +114,11 @@
                 color: white;
                 margin: 0%;
                 float: right;
-                margin-right: 1%;
-                margin-top: -2.5px;
+                margin-right: -1%;
                 font-size: 50px;
                 z-index: 40;
+                height: 50px;
+                width: 80px;
             }
         }
         
@@ -186,29 +190,29 @@
     </div>
     <div class="topnavopen">
         <img class="logo" src="pics/goozbarnabas_logo.png " onclick="window.location = 'https://goozbarnabas.github.io'" />
-        <span class="openNav " style="cursor:pointer " onclick="openNav() ">&#9776</span>
+        <img class="openNav" src=" pics/menu.png " alt=" " onclick="openNav() " style="cursor: pointer; ">
     </div>
 
 
-    <div class="hello">
+    <div class="hello ">
         <h1>Hello.</h1>
-        <img src="pics/2842680.jpg" alt="">
+        <img src="pics/2842680.jpg " alt=" ">
     </div>
-    <div class="aboutme">
-        <div class="info">
-            <img src="pics/profil.png" alt="Ez vagyok én">
+    <div class="aboutme ">
+        <div class="info ">
+            <img src="pics/profil.png " alt="Ez vagyok én ">
             <h1>Üdvözöllek weboldalamon.</h1>
-            <h2>Engem Gőz Barnabásnak hívnak. Webfejlesztéssel és videó vágással foglalkozom szabadidőmben.</h2>
-            <button onclick="window.location = 'https://www.facebook.com/barnabas.goz'">Facebook</button>
+            <h2>Gőz Barnabásnak hívnak. Webfejlesztéssel és videó vágással foglalkozom szabadidőmben.</h2>
+            <button onclick="window.location='https://www.facebook.com/barnabas.goz' ">Facebook</button>
         </div>
     </div>
     <script>
         function openNav() {
-            document.getElementById("mySidenav").style.width = "300px ";
+            document.getElementById("mySidenav").style.width = "300px";
         }
 
         function closeNav() {
-            document.getElementById("mySidenav").style.width = "0 ";
+            document.getElementById("mySidenav").style.width = "0";
         }
     </script>
 

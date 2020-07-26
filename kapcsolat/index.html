@@ -7,11 +7,55 @@
     <meta name="description" content="Weboldal készítés, videó készítés, egyebek. Készítette: Gőz Barnabás">
     <meta name="keywords" content="HTML, CSS, JavaScript, Weboldal, készítés, videó, vágás, discord, szerver, készítés">
     <meta name="author" content="Gőz Barnabás">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <style>
         body {
             font-family: "Lato", sans-serif;
             background-color: #FDF2E9
+        }
+        
+        @media only screen and (min-width: 768px) {
+            .hello h1 {
+                font-family: 'Courier New', Courier, monospace;
+                position: absolute;
+                top: 35%;
+                left: 11.5%;
+                font-size: 80px;
+                z-index: 25;
+            }
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .hello h1 {
+                font-family: 'Courier New', Courier, monospace;
+                position: absolute;
+                top: 20%;
+                left: 14%;
+                font-size: 70px;
+                z-index: 25;
+            }
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .hello img {
+                position: absolute;
+                top: 40%;
+                left: -17%;
+                width: 600px;
+                height: 400px;
+                z-index: 25;
+            }
+        }
+        
+        @media only screen and (min-width: 768px) {
+            .hello img {
+                position: absolute;
+                top: 20%;
+                left: 38%;
+                width: 700px;
+                height: 500px;
+                z-index: 25;
+            }
         }
         
         .logo {
@@ -21,29 +65,48 @@
             cursor: pointer;
         }
         
-        .openNav {
-            color: white;
-            margin: 0%;
-            float: right;
-            margin-right: 1%;
+        @media only screen and (max-width: 768px) {
+            .openNav {
+                color: white;
+                margin: 0%;
+                float: right;
+                margin-right: -2%;
+                z-index: 40;
+                height: 50px;
+                width: 80px;
+            }
+        }
+        
+        @media only screen and (min-width: 768px) {
+            .openNav {
+                color: white;
+                margin: 0%;
+                float: right;
+                margin-right: -1%;
+                font-size: 50px;
+                z-index: 40;
+                height: 50px;
+                width: 80px;
+            }
         }
         
         .topnavopen {
             background-color: black;
             width: 100%;
-            height: 7%;
+            height: 50px;
             position: fixed;
             margin-left: 0%;
             margin-top: 0%;
             left: 0%;
             top: 0%;
+            z-index: 40;
         }
         
         .sidenav {
             height: 100%;
             width: 0;
             position: fixed;
-            z-index: 1;
+            z-index: 50;
             top: 0;
             left: 0;
             background-color: #111;
@@ -81,6 +144,39 @@
                 font-size: 18px;
             }
         }
+        
+        @media only screen and (max-width: 768px) {
+            .form {
+                margin-top: 240%;
+                border-radius: 25px;
+                border: 2px solid black;
+                margin-bottom: 70%;
+                text-align: center;
+                margin-left: 5%;
+                margin-right: 5%;
+                background-color: #e29f89;
+                font-size: 18.5px;
+            }
+        }
+        
+        @media only screen and (min-width: 768px) {
+            .form {
+                margin-top: 65%;
+                border-radius: 25px;
+                border: 2px solid black;
+                margin-left: 33.3%;
+                width: 33.3%;
+                margin-bottom: 16.5%;
+                text-align: center;
+                background-color: #e29f89;
+                padding: 10px;
+            }
+        }
+        
+        .form button {
+            font-size: 20px;
+            margin-bottom: 2.5%;
+        }
     </style>
 </head>
 
@@ -88,19 +184,48 @@
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="../index.html">Kezdőlap</a>
-        <a href="../referenciak/index.html">Referenciák</a>
-        <a href="../technology/index.html">Technológia</a>
-        <a href="index.html">Kapcsolat</a>
+        <a href="../index.html">🏠 Kezdőlap</a>
+        <a href="../referenciak/index.html">👨🏽‍💻 Referenciák</a>
+        <a href="../technology/index.html">🖥 Technológia</a>
+        <a href="index.html">📱Kapcsolat</a>
     </div>
     <div class="topnavopen">
         <img class="logo" src="../pics/goozbarnabas_logo.png " onclick="window.location = 'https://goozbarnabas.github.io'" />
-        <span class="openNav " style=" font-size:30px;cursor:pointer " onclick="openNav() ">&#9776</span>
+        <img class="openNav" src="../pics/menu.png " alt=" " onclick="openNav() " style="cursor: pointer; ">
     </div>
+    <div class="hello">
+        <h1>Kapcsolat</h1>
+        <img src="../pics/contackt.png" alt="">
+    </div>
+    <div class="form">
+        <h1>Üzenet küldése</h1>
+        <form action="https://formspree.io/xpzykogg" method="POST">
+            <label>
+    Először add meg nevedet vagy céged nevét:
+    <input type="text" name="name">
+  </label>
+            <br>
+            <br>
+            <label>
+    Adj meg egy e-mail címet amire válaszolhatunk:
+    <input type="text" name="_replyto"></input>
 
+  </label>
+            <br>
+            <br>
+            <label> Írd le az üzeneted:
+                <br>
+<textarea name="message"></textarea>
+
+  </label>
+            <br>
+            <br>
+            <button type="submit">Küldés</button>
+        </form>
+    </div>
     <script>
         function openNav() {
-            document.getElementById("mySidenav").style.width = "250px ";
+            document.getElementById("mySidenav").style.width = "300px ";
         }
 
         function closeNav() {
