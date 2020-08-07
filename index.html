@@ -9,11 +9,14 @@
     <meta name="author" content="Gőz Barnabás">
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
         body {
             font-family: "Lato", sans-serif;
-            background-color: #FDF2E9
+            background-color: white;
+            overflow-y: hidden;
         }
-        
+
         @media only screen and (min-width: 768px) {
             .aboutme {
                 margin-top: 65%;
@@ -24,15 +27,15 @@
                 margin-left: 20%;
                 margin-bottom: 16.5%;
                 text-align: center;
-                background-color: #e29f89;
+                background-color: white;
             }
         }
-        
+
         .info button {
             font-size: 30px;
             border-radius: 12px;
         }
-        
+
         @media only screen and (max-width: 768px) {
             .aboutme {
                 margin-top: 240%;
@@ -42,61 +45,118 @@
                 text-align: center;
                 margin-left: 5%;
                 margin-right: 5%;
-                background-color: #e29f89;
+                background-color: white;
             }
         }
-        
+
         @media only screen and (min-width: 768px) {
-            .hello h1 {
-                font-family: 'Courier New', Courier, monospace;
-                position: absolute;
-                top: 35%;
-                left: 20%;
+            .home h1 {
+                font-family: 'Montserrat', sans-serif;
                 font-size: 80px;
                 z-index: 25;
+                background-color: #975F11;
+                color: #143C7E;
+                margin-left: 20vw;
+                margin-bottom: 0px;
+                width: 111px;
             }
         }
-        
+
         @media only screen and (max-width: 768px) {
-            .hello h1 {
-                font-family: 'Courier New', Courier, monospace;
-                position: absolute;
-                top: 20%;
-                left: 30%;
+            .home h1 {
+                font-family: 'Montserrat', sans-serif;
                 font-size: 70px;
                 z-index: 25;
+                background-color: #975F11;
+                color: #143C7E;
+                margin-left: 15vw;
+                margin-bottom: 0px;
+                width: 111px;
+                margin-top: 18vh;
             }
         }
-        
+
         @media only screen and (max-width: 768px) {
-            .hello img {
-                position: absolute;
-                top: 40%;
-                left: 3%;
-                width: 500px;
-                height: 500px;
-                z-index: 25;
+            .home h3 {
+                font-size: 30px;
+                font-family: 'Montserrat', sans-serif;
+                background-color: #975F11;
+                color: #143C7E;
+                margin-left: 15vw;
+                margin-top: 0.5vh;
+                margin-bottom: 0px;
+                width: 380px;
+            }
+
+            .home h2 {
+                font-size: 30px;
+                font-family: 'Montserrat', sans-serif;
+                background-color: #975F11;
+                color: #143C7E;
+                margin-left: 15vw;
+                margin-top: 0.5vh;
+                margin-bottom: 0px;
+                width: 370px;
             }
         }
-        
+
         @media only screen and (min-width: 768px) {
-            .hello img {
-                position: absolute;
-                top: 15%;
-                left: 45%;
-                width: 600px;
-                height: 600px;
-                z-index: 25;
+            .home h3 {
+                font-size: 30px;
+                font-family: 'Montserrat', sans-serif;
+                background-color: #975F11;
+                color: #143C7E;
+                margin-left: 20vw;
+                margin-top: 0.5vh;
+                margin-bottom: 0px;
+                width: 620px;
+            }
+
+            .home h2 {
+                font-size: 30px;
+                font-family: 'Montserrat', sans-serif;
+                background-color: #975F11;
+                color: #143C7E;
+                margin-left: 20vw;
+                margin-top: 0.5vh;
+                margin-bottom: 0px;
+                width: 500px;
+            }
+
+            .home button {
+                background: linear-gradient(to bottom, #975f11 5%, #975f11 100%);
+                background-color: #975f11;
+                display: inline-block;
+                cursor: pointer;
+                color: #143c7e;
+                font-family: Arial;
+                font-size: 20px;
+                font-weight: bold;
+                padding: 15px 30px;
+                text-decoration: none;
+                margin-left: 20vw;
             }
         }
-        
+
+        #home {
+            background-image: url("/pics/20200805_120422.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+            margin: 0%;
+            left: 0vw;
+            top: 0vh;
+            position: absolute;
+        }
+
         .logo {
             width: 100px;
             height: 100px;
             margin-left: 1.5%;
             cursor: pointer;
         }
-        
+
         @media only screen and (max-width: 768px) {
             .openNav {
                 color: white;
@@ -108,7 +168,7 @@
                 width: 80px;
             }
         }
-        
+
         @media only screen and (min-width: 768px) {
             .openNav {
                 color: white;
@@ -121,7 +181,7 @@
                 width: 80px;
             }
         }
-        
+
         .topnavopen {
             background-color: black;
             width: 100%;
@@ -133,7 +193,7 @@
             top: 0%;
             z-index: 40;
         }
-        
+
         .sidenav {
             height: 100%;
             width: 0;
@@ -146,7 +206,7 @@
             transition: 0.5s;
             padding-top: 60px;
         }
-        
+
         .sidenav a {
             padding: 8px 8px 8px 32px;
             text-decoration: none;
@@ -155,11 +215,11 @@
             display: block;
             transition: 0.3s;
         }
-        
+
         .sidenav a:hover {
             color: #f1f1f1;
         }
-        
+
         .sidenav .closebtn {
             position: absolute;
             top: 0;
@@ -167,14 +227,22 @@
             font-size: 36px;
             margin-left: 50px;
         }
-        
+
         @media screen and (max-height: 450px) {
             .sidenav {
                 padding-top: 15px;
             }
+
             .sidenav a {
                 font-size: 18px;
             }
+        }
+
+        .wrapper {
+            margin-top: 8%;
+            display: flex;
+            height: auto;
+            width: 100%;
         }
     </style>
 </head>
@@ -183,21 +251,29 @@
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html">🏠 Kezdőlap</a>
+        <a href="#home">🏠 Kezdőlap</a>
         <a href="referenciak/index.html">👨🏽‍💻 Referenciák</a>
         <a href="technology/index.html">🖥 Technológia</a>
         <a href="kapcsolat/index.html">📱 Kapcsolat</a>
     </div>
     <div class="topnavopen">
-        <img class="logo" src="pics/goozbarnabas_logo.png " onclick="window.location = 'https://goozbarnabas.github.io'" />
+        <img class="logo" src="pics/goozbarnabas_logo.png "
+            onclick="window.location = 'https://goozbarnabas.github.io'" />
         <img class="openNav" src=" pics/menu.png " alt=" " onclick="openNav() " style="cursor: pointer; ">
     </div>
+    <section id="home">
+        <div class="wrapper">
+            <div class="home">
+                <h1>Hi,</h1>
+                <h2>I'm Barnabás Gőz from Hungary. I study front-end web development and I edit videos.</h2>
+                <h3>You can always fell free to say hello on <a
+                        href="mailto:hello@goozbarnabas.ga">hello@goozbarnabas.ga</a></h3>
+                <button onclick="window.location='#contact'">Contact me!</button>
+            </div>
+        </div>
+    </section>
 
 
-    <div class="hello ">
-        <h1>Hello.</h1>
-        <img src="pics/2842680.jpg " alt=" ">
-    </div>
     <div class="aboutme ">
         <div class="info ">
             <img src="pics/profil.png " alt="Ez vagyok én ">
@@ -206,6 +282,8 @@
             <button onclick="window.location='https://www.facebook.com/barnabas.goz' ">Facebook</button>
         </div>
     </div>
+
+    <section id="contact"></section>
     <script>
         function openNav() {
             document.getElementById("mySidenav").style.width = "300px";
