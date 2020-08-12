@@ -1,7 +1,26 @@
 <!DOCTYPE html>
 <html>
+<script>
+    var nyitva = false
+
+    function openNav() {
+        if (nyitva == false) {
+            document.getElementById("mySidenav").style.width = "300px ";
+            nyitva = true
+        } else if (nyitva == true) {
+            document.getElementById("mySidenav").style.width = "0px ";
+            nyitva = false
+        }
+
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0 ";
+    }
+</script>
 
 <head>
+    <meta http-equiv="refresh" content="5; url='https://goozbarnabas.gq'" />
     <title>Technológiák - goozbarnabas.gq</title>
     <meta charset="UTF-8">
     <meta name="description" content="Weboldal készítés, videó készítés, egyebek. Készítette: Gőz Barnabás">
@@ -9,18 +28,21 @@
     <meta name="author" content="Gőz Barnabás">
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
         body {
-            font-family: "Lato", sans-serif;
-            background-color: #FDF2E9
+            font-family: "Montserrat", sans-serif;
+            background-image: url(../pics/undraw_not_found_60pq.svg);
+            background-size: cover;
         }
-        
+
         .logo {
             width: 100px;
             height: 100px;
             margin-left: 1.5%;
             cursor: pointer;
         }
-        
+
         @media only screen and (max-width: 768px) {
             .openNav {
                 color: white;
@@ -32,7 +54,7 @@
                 width: 80px;
             }
         }
-        
+
         @media only screen and (min-width: 768px) {
             .openNav {
                 color: white;
@@ -45,7 +67,7 @@
                 width: 80px;
             }
         }
-        
+
         .topnavopen {
             background-color: black;
             width: 100%;
@@ -57,7 +79,7 @@
             top: 0%;
             z-index: 40;
         }
-        
+
         .sidenav {
             height: 100%;
             width: 0;
@@ -70,7 +92,7 @@
             transition: 0.5s;
             padding-top: 60px;
         }
-        
+
         .sidenav a {
             padding: 8px 8px 8px 32px;
             text-decoration: none;
@@ -79,11 +101,11 @@
             display: block;
             transition: 0.3s;
         }
-        
+
         .sidenav a:hover {
             color: #f1f1f1;
         }
-        
+
         .sidenav .closebtn {
             position: absolute;
             top: 0;
@@ -91,14 +113,37 @@
             font-size: 36px;
             margin-left: 50px;
         }
-        
+
         @media screen and (max-height: 450px) {
             .sidenav {
                 padding-top: 15px;
             }
+
             .sidenav a {
                 font-size: 18px;
             }
+        }
+
+        .wrapper {
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+
+        .nensec {
+            margin-top: 30vh;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #fffb00;
+            border-radius: 25px;
+            width: 30vw;
+            height: auto;
+            padding: 20px;
+        }
+
+        .oops {
+            font-size: 4em;
+            margin: 0px;
         }
     </style>
 </head>
@@ -107,25 +152,25 @@
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="../index.html">🏠 Kezdőlap</a>
-        <a href="../referenciak/index.html">👨🏽‍💻 Referenciák</a>
-        <a href="index.html">🖥 Technológia</a>
-        <a href="../kapcsolat/index.html">📱 Kapcsolat</a>
+        <a href="../index.html#home">🏠 Home</a>
+        <a herf="../index.html#about">👨🏽About me</a>
+        <a href="../index.html#references">👨🏽‍💻 References</a>
+        <a href="../index.html#technology">🖥 Technology</a>
+        <a href="../index.html#contact">📱 Contact us</a>
     </div>
     <div class="topnavopen">
-        <img class="logo" src="../pics/goozbarnabas_logo.png " onclick="window.location = 'https://goozbarnabas.github.io'" />
+        <img class="logo" src="../pics/goozbarnabas_logo.png "
+            onclick="window.location = 'https://goozbarnabas.gq'" />
         <img class="openNav" src="../pics/menu.png " alt=" " onclick="openNav() " style="cursor: pointer; ">
     </div>
-
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "300px ";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0 ";
-        }
-    </script>
+    <div class="wrapper">
+        <div class="nensec">
+            <h2 class="oops">Oops...</h2>
+            <h3 class="thispage">This page does not exists!</h3>
+            <h4 id="timer">You will be redirected in 5 seconds to the homepage.</h4>
+            <a href="https://goozbarnabas.gq">Go back to homepage.</a>
+        </div>
+    </div>
 
 </body>
 

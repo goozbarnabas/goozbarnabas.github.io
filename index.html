@@ -2,6 +2,24 @@
 <html>
 
 <head>
+    <script>
+        var nyitva = false
+
+        function openNav() {
+            if (nyitva == false) {
+                document.getElementById("mySidenav").style.width = "300px ";
+                nyitva = true
+            } else if (nyitva == true) {
+                document.getElementById("mySidenav").style.width = "0px ";
+                nyitva = false
+            }
+
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0 ";
+        }
+    </script>
     <title>Kezdőlap • goozbarnabas.gq</title>
     <meta charset="UTF-8">
     <meta name="description" content="Weboldal készítés, videó készítés, egyebek. Készítette: Gőz Barnabás">
@@ -98,6 +116,20 @@
                 margin-bottom: 0px;
                 width: 370px;
             }
+
+            .home button {
+                background: linear-gradient(to bottom, #975f11 5%, #975f11 100%);
+                background-color: #975f11;
+                display: inline-block;
+                cursor: pointer;
+                color: #143c7e;
+                font-family: Arial;
+                font-size: 20px;
+                font-weight: bold;
+                padding: 15px 30px;
+                text-decoration: none;
+                margin-left: 20vw;
+            }
         }
 
         @media only screen and (min-width: 768px) {
@@ -139,7 +171,7 @@
         }
 
         #home {
-            background-image: url("/pics/20200805_120422.jpg");
+            background-image: url("/pics/Image\ 2020.\ 08.\ 12.\ at\ 9.28.jpeg");
             background-repeat: no-repeat;
             background-size: cover;
             width: 100vw;
@@ -248,13 +280,14 @@
 </head>
 
 <body>
-
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#home">🏠 Kezdőlap</a>
-        <a href="referenciak/index.html">👨🏽‍💻 Referenciák</a>
-        <a href="technology/index.html">🖥 Technológia</a>
-        <a href="kapcsolat/index.html">📱 Kapcsolat</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#home">🏠 Home</a>
+        <a herf="#about">👨🏽About me</a>
+        <a href="#references">👨🏽‍💻 References</a>
+        <a href="#technology">🖥 Technology</a>
+        <a href="#contact">📱 Contact us</a>
     </div>
     <div class="topnavopen">
         <img class="logo" src="pics/goozbarnabas_logo.png "
@@ -273,29 +306,23 @@
         </div>
     </section>
 
-
-    <div class="aboutme ">
-        <div class="info ">
-            <img src="pics/profil.png " alt="Ez vagyok én ">
-            <h1>Üdvözöllek weboldalamon.</h1>
-            <h2>Gőz Barnabásnak hívnak. Webfejlesztéssel és videó vágással foglalkozom szabadidőmben.</h2>
-            <button onclick="window.location='https://www.facebook.com/barnabas.goz' ">Facebook</button>
+    <section id="about">
+        <div class="aboutme ">
+            <div class="info ">
+                <img src="pics/profil.png " alt="Ez vagyok én ">
+                <h1>Üdvözöllek weboldalamon.</h1>
+                <h2>Gőz Barnabásnak hívnak. Webfejlesztéssel és videó vágással foglalkozom szabadidőmben.</h2>
+                <button onclick="window.location='https://www.facebook.com/barnabas.goz' ">Facebook</button>
+            </div>
         </div>
-    </div>
+    </section>
+    <section id="technology">
 
-    <section id="contact"></section>
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "300px";
-        }
+    </section>
 
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
-    </script>
+    <section id="contact">
 
+    </section>
 </body>
-
-</html>
 
 </html>
