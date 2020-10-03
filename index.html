@@ -134,6 +134,7 @@
                 padding: 15px 30px;
                 text-decoration: none;
                 margin-left: 20vw;
+                opacity: 1;
             }
         }
 
@@ -190,8 +191,9 @@
         .logo {
             width: 100px;
             height: 100px;
-            margin-left: 1.5%;
             cursor: pointer;
+            margin-top: 5px;
+            opacity: 1;
         }
 
         @media only screen and (max-width: 768px) {
@@ -222,13 +224,14 @@
         .topnavopen {
             background-color: black;
             width: 100%;
-            height: 50px;
+            height: 110px;
             position: fixed;
             margin-left: 0%;
             margin-top: 0%;
             left: 0%;
             top: 0%;
             z-index: 40;
+            opacity: 0.25;
         }
 
         .sidenav {
@@ -281,6 +284,44 @@
             height: auto;
             width: 100%;
         }
+
+        .contactbtn {
+            width: 200px;
+            font-size: 30px;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #975F11;
+            color: #143C7E;
+            margin-left: 20vw;
+            margin-top: 0.5vh;
+            margin-bottom: 0px;
+        }
+
+        .contactbtn a {
+            color: #143C7E;
+        }
+
+        .info {
+            display: flex;
+        }
+
+        .gradient {
+            background: #009FFF;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #ec2F4B, #009FFF);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            opacity: 0.5;
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+        }
+
+        .flex{
+            display: flex;
+            justify-content: center;
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -295,18 +336,23 @@
         <a href="#contact">📱 Contact us</a>
     </div>
     <div class="topnavopen">
-        <img class="logo" src="pics/goozbarnabas_logo.png "
-            onclick="window.location = 'https://goozbarnabas.github.io'" />
+        <div class="flex">
+            <img class="logo" src="pics/goozbarnabas_logo.png "
+            onclick="window.location = 'https://goozbarnabas.gq'" />
+        </div>
+        
         <img class="openNav" src=" pics/menu.png " alt=" " onclick="openNav() " style="cursor: pointer; ">
     </div>
     <section id="home">
-        <div class="wrapper">
-            <div class="home">
-                <h1>Hi,</h1>
-                <h2>I'm Barnabás Gőz from Hungary. I study front-end web development and I edit videos.</h2>
-                <h3>You can always fell free to say hello on <a
-                        href="mailto:hello@goozbarnabas.ga">hello@goozbarnabas.ga</a></h3>
-                <button onclick="window.location='#contact'">Contact me!</button>
+        <div class="gradient">
+            <div class="wrapper">
+                <div class="home">
+                    <h1>Hi,</h1>
+                    <h2>I'm Barnabás Gőz from Hungary. I study front-end web development and I edit videos.</h2>
+                    <h3>You can always fell free to say hello on <a
+                            href="mailto:admin@goozbarnabas.gq">admin@goozbarnabas.gq</a></h3>
+                    <h4 class="contactbtn"><a href="#contact">Contact me!</a></h4>
+                </div>
             </div>
         </div>
     </section>
@@ -314,9 +360,13 @@
     <section id="about-me">
         <div class="aboutme">
             <div class="info">
-                <img onclick="window.location='https://facebook.com/barnabas.goz'" src="pics/phone-with-facebook.png" alt="facebook">
+                <img onclick="window.location='https://facebook.com/barnabas.goz'" src="pics/phone-with-facebook.png"
+                    alt="facebook">
                 <h1>About me:</h1>
-                <h2>Hi! I'm Barnabás Gőz from Hungary. Now i studying front-end web develpment. My teacher is <span style="color: blue" onclick="window.location='https://martongratzer.dev'">Márton Gratzer</span> he is a Full-stack web developer. So I'm 12 years old and I live in Hungray. Sometimes in my free time i edit videos.</h2>
+                <h2>Hi! I'm Barnabás Gőz from Hungary. Now i studying front-end web develpment. My teacher is <span
+                        style="color: blue" onclick="window.location='https://martongratzer.dev'">Márton Gratzer</span>
+                    he is a Full-stack web developer. So I'm 12 years old and I live in Hungray. Sometimes in my free
+                    time i edit videos.</h2>
             </div>
         </div>
     </section>
@@ -327,15 +377,19 @@
     <section id="contact">
 
     </section>
-
-
-
-
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/5f78a01df0e7167d0015e587/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
     </script>
+    <!--End of Tawk.to Script-->
 </body>
 
 </html>
